@@ -1,0 +1,6 @@
+{
+  "instagram": {
+    "baseURL": "https://api.instagram.com/v1/tags/",
+    "accessToken": "199865.1fb234f.9190b7765aab4265be250aba0630871d"
+  }
+}

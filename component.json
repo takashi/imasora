@@ -1,0 +1,6 @@
+{
+  "name": "imasora",
+  "description": "my first app with component",
+  "paths": ["src", "src/lib"],
+  "locals": ["boot"]
+}

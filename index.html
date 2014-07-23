@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>imasora</title>
+        <link rel="stylesheet" href="build/build.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    </head>
+    <body id="imasoraApp">
+        <div class="main">
+            <div class="time-box">
+                <svg id="svg"></svg>
+            </div>
+            <div v-repeat="photos" class="photo js-photos">
+                <img v-attr="src: standard_resolution.url" alt="" class="photo-source">
+            </div>
+        </div>
+        <script src="build/build.js"></script>
+        <script src="//cdn.jsdelivr.net/snap.svg/0.3.0/snap.svg-min.js"></script>
+        <script>
+            require('./src/boot');
+
+            /**
+             * Write svg clock logic directory,
+             * because component of Snap.svg does not work well :/
+             */
+            function toLocaleString( date ){
+                return [
+                    date.getFullYear(),
+                    '/',
+                    '0' + (date.getMonth() + 1),
+                    '/',
+                    date.getDate()
+                    ].join( ' ' ) + ' '
+                    + date.toLocaleTimeString();
+            }
+
+            window.onload = function(){
+                var paper = Snap.select("#svg");
+                var date = toLocaleString(new Date());
+                text = paper.text("19%", "50%", date)
+                    .attr({
+                        fontSize: 120,
+                        stroke: "white",
+                        strokeWidth: "2px",
+                        strokeDasharray: 800,
+                        strokeDashoffset: 800,
+                        fill: 'transparent',
+                        fontFamily: 'Open Sans Condensed'
+                    })
+
+                var time;
+                var startTimer = function(){
+                    var d = new Date()
+                    var now = d.getTime(),
+                        dt = now - (time||now);
+                    if(!time){
+                        time = now;
+                    }
+                    if(dt > 1000){
+                        time = now;
+                        text.node.textContent = toLocaleString(d);
+                    }
+                    requestAnimationFrame(startTimer)
+                }
+
+                Snap.animate(800, 0, function(value){
+                    text.attr({
+                        strokeDashoffset: value
+                    });
+                }, 1100, mina.linear, startTimer);
+            }
+        </script>
+    </body>
+</html>

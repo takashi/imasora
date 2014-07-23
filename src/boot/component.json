@@ -1,0 +1,16 @@
+{
+  "name": "boot",
+  "description": "Main app boot component",
+  "dependencies": {
+    "necolas/normalize.css": "^3.0.0",
+    "yyx990803/vue": "*",
+    "components/jquery": "2.1.1"
+  },
+  "scripts": ["index.js"],
+  "styles": ["style.css"],
+  "local": [
+    "instagram",
+    "moment",
+    "raf"
+  ]
+}

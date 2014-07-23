@@ -1,0 +1,8 @@
+{
+  "name": "raf",
+  "description": "WRITE DESCRIPTION OF THIS COMPONENT HERE",
+  "version": "0.0.1",
+  "scripts": [
+    "index.js"
+  ]
+}

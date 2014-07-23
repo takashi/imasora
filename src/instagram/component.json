@@ -1,0 +1,14 @@
+{
+  "name": "instagram",
+  "description": "connect with instagram api",
+  "version": "0.0.1",
+  "dependencies": {
+    "components/jquery": "2.1.1"
+  },
+  "scripts": [
+    "index.js"
+  ],
+  "json": [
+    "settings.json"
+  ]
+}

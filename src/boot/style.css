@@ -1,0 +1,47 @@
+body{
+  margin: 0;
+}
+
+.main{
+  overflow: hidden;
+  width: 100%;
+}
+
+.photo{
+  float: left;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 150px;
+  height: 150px;
+}
+
+.photo-source {
+  width: 100%;
+  height: auto;
+}
+
+.time-box {
+  font-size: 5em;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 100;
+  position: fixed;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  line-height: 1.7;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+}
+
+.time-box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#svg{
+  width: auto;
+  height: auto;
+}

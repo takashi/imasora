@@ -1,0 +1,11 @@
+{
+  "name": "moment",
+  "description": "WRITE DESCRIPTION OF THIS COMPONENT HERE",
+  "version": "0.0.1",
+  "dependencies": {
+    "moment/moment": "2.7.0"
+    },
+  "scripts": [
+    "index.js"
+  ]
+}
