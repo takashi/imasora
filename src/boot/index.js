@@ -76,6 +76,9 @@ new Vue({
           width: iw,
           height: iw
         });
+        $('.photo-source').css({
+          "backgroundSize": iw*1.3+'px '+iw*1.3+'px'
+        });
       }
     }
   });

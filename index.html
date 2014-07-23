@@ -12,7 +12,8 @@
                 <svg id="svg"></svg>
             </div>
             <div v-repeat="photos" class="photo js-photos">
-                <img v-attr="src: standard_resolution.url" alt="" class="photo-source">
+                <div class="photo-source"  v-style="background-image: 'url('+ standard_resolution.url +')'"></div>
+                <!-- <img v-attr="src: standard_resolution.url" alt="" class="photo-source"> -->
             </div>
         </div>
         <script src="build/build.js"></script>
