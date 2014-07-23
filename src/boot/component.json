@@ -10,7 +10,6 @@
   "styles": ["style.css"],
   "local": [
     "instagram",
-    "moment",
     "raf"
   ]
 }
